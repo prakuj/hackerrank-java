@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+import java.math.*;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Scanner sc=new Scanner(System.in);
+        BigInteger num1=new BigInteger(sc.nextLine());
+        BigInteger num2=new BigInteger(sc.nextLine());
+        BigInteger pdt=new BigInteger("1");
+         BigInteger sum=new BigInteger("0");
+        sum=sum.add(num1);
+        sum=sum.add(num2);
+        pdt=pdt.multiply(num1);
+        pdt=pdt.multiply(num2);
+        System.out.println(sum);
+        System.out.println(pdt);
+        
+            sc.close();
+    }
+}
