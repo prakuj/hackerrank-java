@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Testing {
+
+    @SuppressWarnings("deprecation")
+	public static void main(String[] args) throws ParseException {
+        Scanner in = new Scanner(System.in);
+        String month = in.next();
+        String day = in.next();
+        String year = in.next();
+        String st=month+"/"+day+"/"+year;
+       
+        SimpleDateFormat ft=new SimpleDateFormat("MM/dd/yyyy");
+        Date date= ft.parse(st);
+        int n=date.getDay();
+        printday(n);
+        
+    }
+
+	private static void printday(int day) {
+		// TODO Auto-generated method stub
+		
+		if(day==0)
+			System.out.println("SUNDAY");
+		else if(day==1)
+			System.out.println("MONDAY");
+		else if(day==2)
+			System.out.println("TUESDAY");
+		else if(day==3)
+			System.out.println("WEDNESDAY");
+		else if(day==4)
+			System.out.println("THURSDAY");
+		else if(day==5)
+			System.out.println("FRIDAY");
+		else if(day==6)
+			System.out.println("SATURDAY");
+	}
+}

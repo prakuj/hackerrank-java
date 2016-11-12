@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class JavaCurrencyInstanceNumberFormat {
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double payment = scanner.nextDouble();
+       
+        Locale localeUS = new Locale("en", "US");      
+        NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(localeUS);
+        System.out.println("US format = "+currencyFormatter.format(payment));
+        Locale localeIN = new Locale("en", "IN");      
+        NumberFormat currencyFormatter2 = NumberFormat.getCurrencyInstance(localeIN);
+        System.out.println("India format = "+currencyFormatter2.format(payment));
+        scanner.close();
+    }
+}
