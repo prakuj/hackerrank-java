@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+         String s = scan.nextLine();
+        String st[]=s.split("[\\!\\,\\ \\?\\.\\_\\'\\@]");
+       int count=0;
+        for(String x:st){
+            if(!x.equals(""))
+       count++;}
+        System.out.println(count);
+        for(String x:st){
+            if(!x.equals(""))
+       System.out.println(x);}
+        scan.close();
+
+        // Write your code here.
+    }
+}
